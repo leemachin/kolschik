@@ -1,0 +1,13 @@
+{{ define "header" }}
+  <header>
+    <h1>{{ .Site.Title }}</h1>
+    <h2>{{ .Title }}</h2>
+    <hr>
+  </header>
+{{ end }}
+  
+{{ define "main" }}
+  <article>
+    {{ .Content }}
+  </article>
+{{ end }}

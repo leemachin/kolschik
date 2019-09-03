@@ -1,0 +1,15 @@
+{{ define "header" }}
+  <header>
+    <h1>{{ .Site.Title }}</h1>
+    <h2>{{ .Site.Params.tagline }}</h2>
+    <hr>
+  </header>
+{{ end }}
+
+{{ define "main" }}
+  <ul>
+  {{ range .Pages }}
+      <li><a href="{{ .Permalink }}">{{ .Title }}</a>
+  {{ end }}
+  </ul>
+{{ end }}

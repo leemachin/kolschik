@@ -1,0 +1,17 @@
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="description" content="{{ .Site.Params.Description }}" />
+
+    {{ range .AlternativeOutputFormats }}
+    <link rel="{{ .Rel }}" type="{{ .MediaType.Type }}" href="{{ .Permalink | safeURL }}">
+    {{ end }}
+
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <link rel="shortcut icon" href="{{ "images/favicon.ico" | absURL }}" />
+    <link rel="stylesheet" href="{{ "css/main.css" | absURL }}" />
+
+    <title>
+        {{ if .IsHome }}{{ .Title }}{{ else }}{{ .Title }} &middot; {{ .Site.Title }}{{ end }}
+    </title>
+</head>
