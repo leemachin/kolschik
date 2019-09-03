@@ -9,7 +9,7 @@
 {{ define "main" }}
   <ul>
   {{ range .Pages }}
-      <li><a href="{{ .Permalink }}">{{ .Title }}</a>
+      <li><a class="listing" href="{{ .Permalink }}">{{ .Title }}</a>
   {{ end }}
   </ul>
 {{ end }}

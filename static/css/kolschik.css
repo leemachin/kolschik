@@ -13,6 +13,10 @@ html {
     font-size: 1.6em;
 }
 
+ul {
+    list-style: none;
+}
+
 p {
     text-align: justify;
 }
@@ -26,19 +30,21 @@ p {
 }
 
 a[href]::before {
-    content: "<a href='" attr(href) "'>";
+    content: '<a href="' attr(href) '">';
 }
 
 a[href]::after {
     content: "</a>";
 }
 
-p::before {
-    content: '<p>';
+a.listing[href]::before {
+    content: '<a href="' attr(href) '">\A    ';
+    white-space: pre;
 }
 
-p::after {
-    content: '</p>';
+a.listing[href]::after {
+    content: '\A</a>';
+    white-space: pre;
 }
 
 h1::before {
@@ -66,11 +72,13 @@ h3::after {
 }
 
 p::before {
-    content: '<p>';
+    content: '<p>\A    ';
+    white-space: pre;
 }
 
 p::after {
-    content: '</p>';
+    content: '\A</p>';
+    white-space: pre;
 }
 
 pre::before {
