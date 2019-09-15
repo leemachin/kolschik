@@ -22,6 +22,10 @@ p {
     text-align: justify;
 }
 
+a {
+    color: rgb(48, 176, 245); /* zima blue ;) */
+}
+
 code:not(pre > code) {
     background-color: #ffffff;
     color: #333333;
@@ -35,7 +39,7 @@ pre > code {
 /* Reveal HTML elems */
 
 *::before, *::after {
-    color: rgb(48, 176, 245, 0.5); /* zima blue ;) */
+    color: rgba(48, 176, 245, 0.5); /* zima blue ;) */
     font-weight: 100;
     font-size: 1.0em;
 }
