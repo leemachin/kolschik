@@ -39,7 +39,7 @@ pre > code {
 /* Reveal HTML elems */
 
 *::before, *::after {
-    color: rgba(48, 176, 245, 0.5); /* zima blue ;) */
+    color: rgba(48, 176, 245, 0.3); /* zima blue ;) */
     font-weight: 100;
     font-size: 1.0em;
 }
