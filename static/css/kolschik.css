@@ -6,7 +6,7 @@
 }
 
 html {
-    max-width: 70ch;
+    max-width: 62ch;
     padding: 2ch;
     margin: auto;
     background-color: #333333;
@@ -25,6 +25,11 @@ p {
 code:not(pre > code) {
     background-color: #ffffff;
     color: #333333;
+}
+
+pre > code {
+    margin-left: 1ch;
+    display: block;
 }
 
 /* Reveal HTML elems */
@@ -94,10 +99,12 @@ p::after {
 }
 
 pre > code::before {
-    content:'<code>';
+    content:'<code lang="' attr(data-lang) '">';
     width: 100%;
     display: block;
-    margin-bottom: 1ch;
+    margin-bottom: 0.5ch;
+    margin-left: -1ch;
+    padding-right: 1ch;
 }
 
 pre > code::after {
@@ -105,6 +112,7 @@ pre > code::after {
     display: block;
     margin-top: 1ch;
     text-align: right;
+    margin-left: -1ch;
 }
 
 code::before {
