@@ -9,7 +9,8 @@ html {
     max-width: 70ch;
     padding: 2ch;
     margin: auto;
-    color: #333333;
+    background-color: #333333;
+    color: #ffffff;
     font-size: 1.6em;
 }
 
@@ -19,6 +20,11 @@ ul {
 
 p {
     text-align: justify;
+}
+
+code:not(pre > code) {
+    background-color: #ffffff;
+    color: #333333;
 }
 
 /* Reveal HTML elems */
@@ -47,6 +53,14 @@ a.listing[href]::after {
     white-space: pre;
 }
 
+a[href^="#footnote"]::before {
+    content: '<fn>';
+}
+
+a[href^="#footnote"]::after {
+    content: '</fn>';
+}
+
 h1::before {
     content: '<h1>';
 }
@@ -72,29 +86,35 @@ h3::after {
 }
 
 p::before {
-    content: '<p>\A    ';
-    white-space: pre;
+    content: '<p>';
 }
 
 p::after {
-    content: '\A</p>';
-    white-space: pre;
+    content: '</p>';
 }
 
-pre::before {
-    content:'<pre>';
+pre > code::before {
+    content:'<code>';
+    width: 100%;
+    display: block;
+    margin-bottom: 1ch;
 }
 
-pre::after {
-    content: '</pre>';
+pre > code::after {
+    content: '</code>';
+    display: block;
+    margin-top: 1ch;
+    text-align: right;
 }
 
 code::before {
-    content:'<code>';
+    content:'`';
+    background-color: #333333;
 }
 
 code::after {
-    content: '</code>';
+    content: '`';
+    background-color: #333333;
 }
 
 aside::before {
